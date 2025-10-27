@@ -14,11 +14,15 @@ os.makedirs(UPLOADS_DIR, exist_ok=True)
 @router.post("/scan-file/")
 async def scan_file(file: UploadFile = File(...)):
     """
-    Accepts a file for scanning, saves it, performs a scan,
+    Accepts a file for scanning, saves it securely, performs a scan,
     stores the report, and returns the report ID.
     """
     try:
-        file_location = os.path.join(UPLOADS_DIR, file.filename)
+        # Generate a secure filename to prevent path traversal attacks
+        ext = os.path.splitext(file.filename)[1]
+        secure_filename = f"{uuid.uuid4()}{ext}"
+        file_location = os.path.join(UPLOADS_DIR, secure_filename)
+
         with open(file_location, "wb+") as file_object:
             file_object.write(file.file.read())
 
@@ -29,7 +33,7 @@ async def scan_file(file: UploadFile = File(...)):
         report_id = str(uuid.uuid4())
         database.save_report(report_id, report)
 
-        return {"filename": file.filename, "report_id": report_id}
+        return {"filename": file.filename, "report_id": report_id, "secure_filename": secure_filename}
     except Exception as e:
         # In a real application, log the error properly
         raise HTTPException(status_code=500, detail=f"An error occurred: {e}")
