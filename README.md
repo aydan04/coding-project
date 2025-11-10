@@ -60,57 +60,28 @@ This tool is intended for educational and research purposes only. It should not 
 
 ## Running the Project Locally
 
-Follow these steps to set up and run the application on your local machine.
+This project includes a script to automate the setup and execution process.
 
 ### Prerequisites
 
 *   Python 3.8 or higher
-*   pip (Python package installer)
 
-### 1. Clone the Repository
+### Instructions
 
-First, clone the project repository to your local machine:
+1.  **Clone the Repository** (if you haven't already):
+    ```bash
+    git clone https://github.com/your-username/malware-analysis-project.git
+    cd malware-analysis-project
+    ```
 
-```bash
-git clone https://github.com/your-username/malware-analysis-project.git
-cd malware-analysis-project
-```
+2.  **Run the Script**:
+    To set up the virtual environment, install the dependencies, and start the application, simply run the following command:
+    ```bash
+    python3 run_local.py
+    ```
+    The script will handle all the necessary steps for you.
 
-### 2. Create and Activate a Virtual Environment
-
-It is highly recommended to use a virtual environment to manage project dependencies.
-
-**On macOS and Linux:**
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-**On Windows:**
-
-```bash
-python -m venv venv
-.\\venv\\Scripts\\activate
-```
-
-### 3. Install Dependencies
-
-Install the required Python packages using pip:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run the Application
-
-Start the FastAPI application using `uvicorn`. The `--reload` flag will automatically restart the server whenever you make changes to the code.
-
-```bash
-uvicorn src.main:app --reload
-```
-
-### 5. Access the API
+### Accessing the API
 
 Once the server is running, you can access the API at `http://127.0.0.1:8000`.
 
