@@ -58,6 +58,68 @@ This tool is intended for educational and research purposes only. It should not 
 *   **Do not use this tool to create or distribute malware.**
 *   **Be aware of the potential risks of analyzing live malware samples.**
 
+## Running the Project Locally
+
+Follow these steps to set up and run the application on your local machine.
+
+### Prerequisites
+
+*   Python 3.8 or higher
+*   pip (Python package installer)
+
+### 1. Clone the Repository
+
+First, clone the project repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/malware-analysis-project.git
+cd malware-analysis-project
+```
+
+### 2. Create and Activate a Virtual Environment
+
+It is highly recommended to use a virtual environment to manage project dependencies.
+
+**On macOS and Linux:**
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**On Windows:**
+
+```bash
+python -m venv venv
+.\\venv\\Scripts\\activate
+```
+
+### 3. Install Dependencies
+
+Install the required Python packages using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+Start the FastAPI application using `uvicorn`. The `--reload` flag will automatically restart the server whenever you make changes to the code.
+
+```bash
+uvicorn src.main:app --reload
+```
+
+### 5. Access the API
+
+Once the server is running, you can access the API at `http://127.0.0.1:8000`.
+
+To view the interactive API documentation (provided by Swagger UI), navigate to:
+
+**`http://127.0.0.1:8000/docs`**
+
+From this interface, you can test the API endpoints directly in your browser, including uploading files for analysis and retrieving reports.
+
 ## Disclaimer
 
 The developers of this project are not responsible for any damage caused by the use or misuse of this tool. Use at your own risk.
