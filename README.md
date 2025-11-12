@@ -58,6 +58,43 @@ This tool is intended for educational and research purposes only. It should not 
 *   **Do not use this tool to create or distribute malware.**
 *   **Be aware of the potential risks of analyzing live malware samples.**
 
+## Running the Project Locally
+
+This project includes a script to automate the setup and execution process.
+
+### Prerequisites
+
+*   Python 3.8 or higher
+
+### Instructions
+
+1.  **Clone the Repository** (if you haven't already):
+    ```bash
+    git clone https://github.com/your-username/malware-analysis-project.git
+    cd malware-analysis-project
+    ```
+
+2.  **Run the Script**:
+    To set up the virtual environment, install the dependencies, and start the application, simply run the following command:
+    ```bash
+    python3 run_local.py
+    ```
+    The script will handle all the necessary steps for you.
+
+### Accessing the API
+
+Once the server is running, you can access the API at `http://127.0.0.1:8000`.
+
+To view the interactive API documentation (provided by Swagger UI), navigate to:
+
+**`http://127.0.0.1:8000/docs`**
+
+From this interface, you can test the API endpoints directly in your browser, including uploading files for analysis and retrieving reports.
+
+## License
+
+This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
+
 ## Disclaimer
 
 The developers of this project are not responsible for any damage caused by the use or misuse of this tool. Use at your own risk.
