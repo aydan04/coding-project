@@ -91,6 +91,10 @@ To view the interactive API documentation (provided by Swagger UI), navigate to:
 
 From this interface, you can test the API endpoints directly in your browser, including uploading files for analysis and retrieving reports.
 
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 ## Disclaimer
 
 The developers of this project are not responsible for any damage caused by the use or misuse of this tool. Use at your own risk.
